@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { BarChart3, BrainCircuit, Cloud, Database, PieChart, Waypoints } from 'lucide-react';
+import { BarChart3, BrainCircuit, Cloud, Database, PieChart, Waypoints, Bot, MessagesSquare } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Our Services',
@@ -37,6 +37,16 @@ const services = [
     icon: <Waypoints className="w-10 h-10 text-primary" />,
     title: 'AI Product Development',
     description: 'Bring your AI-powered product idea to life. We partner with you through the entire lifecycle, from ideation and prototyping to deployment and scaling of innovative AI applications.'
+  },
+  {
+    icon: <Bot className="w-10 h-10 text-primary" />,
+    title: 'Advanced AI Agent Development',
+    description: 'We build sophisticated AI agents that can perform complex tasks, automate workflows, and interact with your systems to drive efficiency and innovation.'
+  },
+  {
+    icon: <MessagesSquare className="w-10 h-10 text-primary" />,
+    title: 'Chatbot & Automation',
+    description: 'Enhance customer engagement and streamline operations with intelligent, custom-built chatbots and automation solutions tailored to your business needs.'
   }
 ];
 
