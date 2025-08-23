@@ -13,6 +13,8 @@ const navLinks = [
   { href: '/services', label: 'Services' },
   { href: '/case-studies', label: 'Case Studies' },
   { href: '/seo-tool', label: 'SEO Tool' },
+  { href: '/affiliate', label: 'Affiliates' },
+  { href: '/careers', label: 'Careers' },
   { href: '/contact', label: 'Contact' },
 ];
 
