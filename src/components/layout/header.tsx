@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { Menu, X, BotMessageSquare, Search } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
@@ -20,6 +20,16 @@ const navLinks = [
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
+  const router = useRouter();
+
+  const handleSearch = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === 'Enter') {
+        const query = event.currentTarget.value;
+        if (query) {
+            router.push(`/search?q=${encodeURIComponent(query)}`);
+        }
+    }
+  };
 
   const NavLink = ({ href, label, className }: { href: string; label: string; className?: string }) => {
     const isActive = pathname === href;
@@ -58,7 +68,11 @@ export function Header() {
         <div className="hidden md:flex items-center gap-2">
              <div className="relative">
                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-                <Input placeholder="Search..." className="pl-9 w-40" />
+                <Input 
+                    placeholder="Search..." 
+                    className="pl-9 w-40" 
+                    onKeyDown={handleSearch}
+                />
             </div>
             <Button variant="ghost" asChild>
                 <Link href="/login">Sign In</Link>
@@ -78,10 +92,23 @@ export function Header() {
             </SheetTrigger>
             <SheetContent side="right" className="w-[240px]">
               <div className="flex flex-col space-y-4 pt-10">
+                 <div className="relative px-2">
+                    <Search className="absolute left-5 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+                    <Input 
+                        placeholder="Search..." 
+                        className="pl-9"
+                        onKeyDown={(e) => {
+                            if (e.key === 'Enter') {
+                                handleSearch(e);
+                                setIsMenuOpen(false);
+                            }
+                        }}
+                    />
+                </div>
                 {navLinks.map((link) => (
-                  <NavLink key={link.href} {...link} className="text-lg" />
+                  <NavLink key={link.href} {...link} className="text-lg px-2" />
                 ))}
-                <div className="border-t pt-4 space-y-2">
+                <div className="border-t pt-4 space-y-2 px-2">
                      <Button variant="ghost" asChild className="w-full justify-start">
                         <Link href="/login">Sign In</Link>
                     </Button>
@@ -97,5 +124,3 @@ export function Header() {
     </header>
   );
 }
-
-    
