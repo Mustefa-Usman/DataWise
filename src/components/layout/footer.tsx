@@ -9,7 +9,7 @@ export function Footer() {
           <div className="flex flex-col md:col-span-2">
             <Link href="/" className="flex items-center gap-2 mb-4">
               <BotMessageSquare className="h-7 w-7 text-primary" />
-              <span className="text-xl font-bold font-headline text-primary">YourBrand</span>
+              <span className="text-xl font-bold font-headline text-primary">DataWise</span>
             </Link>
             <p className="text-muted-foreground text-sm max-w-sm">
               Transforming data into your greatest asset through innovative AI solutions.
@@ -45,7 +45,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-12 border-t pt-6 text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} YourBrand. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} DataWise. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -4,7 +4,7 @@ import { Mail, Phone, Building } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Contact Us',
-  description: 'Get in touch with the YourBrand team to discuss your data and AI needs.',
+  description: 'Get in touch with the DataWise team to discuss your data and AI needs.',
 };
 
 export default function ContactPage() {
@@ -28,7 +28,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-semibold">Email</h3>
-                  <a href="mailto:hello@yourbrand.com" className="text-muted-foreground hover:text-primary">hello@yourbrand.com</a>
+                  <a href="mailto:hello@datawise.com" className="text-muted-foreground hover:text-primary">hello@datawise.com</a>
                 </div>
               </div>
               <div className="flex items-center gap-4">

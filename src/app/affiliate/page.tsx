@@ -6,7 +6,7 @@ import { DollarSign, Gift, Zap } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Affiliate Program',
-  description: 'Join the YourBrand affiliate program and earn commissions by promoting our industry-leading AI and data solutions.',
+  description: 'Join the DataWise affiliate program and earn commissions by promoting our industry-leading AI and data solutions.',
 };
 
 const benefits = [
@@ -32,7 +32,7 @@ export default function AffiliatePage() {
     <div className="bg-background">
       <div className="container mx-auto px-4 py-16 md:py-24">
         <div className="text-center mb-12 md:mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold font-headline tracking-tight">Become a YourBrand Affiliate</h1>
+          <h1 className="text-4xl md:text-5xl font-bold font-headline tracking-tight">Become a DataWise Affiliate</h1>
           <p className="text-lg text-muted-foreground mt-4 max-w-3xl mx-auto">
             Partner with a leader in AI solutions and earn rewards for helping businesses unlock their data's potential.
           </p>
@@ -41,7 +41,7 @@ export default function AffiliatePage() {
         <div className="bg-card p-8 md:p-12 rounded-lg shadow-lg mb-12 text-center">
             <h2 className="text-3xl font-bold font-headline mb-4">Ready to Join?</h2>
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-                Signing up is fast, free, and easy. Start earning commissions today by sharing the power of YourBrand.
+                Signing up is fast, free, and easy. Start earning commissions today by sharing the power of DataWise.
             </p>
             <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
                 <Link href="/contact?subject=Affiliate%20Program%20Inquiry">Join the Program Now</Link>

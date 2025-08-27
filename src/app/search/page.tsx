@@ -16,7 +16,7 @@ const allPages = [
   {
     href: '/services',
     title: 'Our Services',
-    description: 'Explore the data and AI services offered by YourBrand, from strategy and analytics to machine learning and cloud solutions.',
+    description: 'Explore the data and AI services offered by DataWise, from strategy and analytics to machine learning and cloud solutions.',
   },
   {
     href: '/courses',
@@ -26,17 +26,17 @@ const allPages = [
   {
     href: '/case-studies',
     title: 'Case Studies',
-    description: 'Discover how YourBrand has helped businesses achieve success through data-driven strategies and AI solutions.',
+    description: 'Discover how DataWise has helped businesses achieve success through data-driven strategies and AI solutions.',
   },
   {
     href: '/contact',
     title: 'Contact Us',
-    description: 'Get in touch with the YourBrand team to discuss your data and AI needs.',
+    description: 'Get in touch with the DataWise team to discuss your data and AI needs.',
   },
   {
     href: '/affiliate',
     title: 'Affiliate Program',
-    description: 'Join the YourBrand affiliate program and earn commissions by promoting our industry-leading AI and data solutions.',
+    description: 'Join the DataWise affiliate program and earn commissions by promoting our industry-leading AI and data solutions.',
   },
   {
     href: '/careers',
@@ -51,7 +51,7 @@ const allPages = [
   {
     href: '/login',
     title: 'Sign In',
-    description: 'Sign in to your YourBrand account to access your dashboard and tools.',
+    description: 'Sign in to your DataWise account to access your dashboard and tools.',
   },
   {
     href: '/signup',

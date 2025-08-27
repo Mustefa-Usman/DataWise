@@ -54,7 +54,7 @@ export function Header() {
       <div className="container mx-auto px-4 h-16 flex items-center justify-between gap-4">
         <Link href="/" className="flex items-center gap-2 mr-6" onClick={() => setIsMenuOpen(false)}>
           <BotMessageSquare className="h-7 w-7 text-primary" />
-          <span className="text-xl font-bold font-headline text-primary">YourBrand</span>
+          <span className="text-xl font-bold font-headline text-primary">DataWise</span>
         </Link>
         
         <nav className="hidden md:flex items-center gap-6">

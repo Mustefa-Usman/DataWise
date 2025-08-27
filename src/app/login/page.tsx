@@ -19,7 +19,7 @@ import { auth } from '@/lib/firebase';
 
 // export const metadata: Metadata = {
 //   title: 'Sign In',
-//   description: 'Sign in to your YourBrand account.',
+//   description: 'Sign in to your DataWise account.',
 // };
 
 const formSchema = z.object({
