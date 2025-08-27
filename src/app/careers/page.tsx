@@ -4,14 +4,16 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
 import { MapPin, BrainCircuit, BarChart3, Bot, ArrowRight } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
+import { ApplicationForm } from '@/components/application-form';
 
 export const metadata: Metadata = {
   title: 'Careers',
-  description: 'Join the YourBrand team and help us build the future of AI and data intelligence. Explore our open positions.',
+  description: 'Join the DataWise team and help us build the future of AI and data intelligence. Explore our open positions.',
 };
 
 const jobOpenings = [
     {
+        id: 'senior-ai-engineer',
         title: 'Senior AI Engineer',
         location: 'Remote, USA',
         department: 'Engineering',
@@ -20,6 +22,7 @@ const jobOpenings = [
         tags: ['AI/ML', 'Python', 'Cloud'],
     },
     {
+        id: 'data-scientist',
         title: 'Data Scientist',
         location: 'Innovation City, IO',
         department: 'Analytics',
@@ -28,6 +31,7 @@ const jobOpenings = [
         tags: ['Analytics', 'SQL', 'Tableau'],
     },
     {
+        id: 'ai-solutions-architect',
         title: 'AI Solutions Architect',
         location: 'Remote, USA',
         department: 'Sales & Solutions',
@@ -48,9 +52,9 @@ export default function CareersPage() {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold font-headline mb-8 text-center">Open Positions</h2>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className="space-y-6">
+                 <h2 className="text-3xl font-bold font-headline mb-2 text-center lg:text-left">Open Positions</h2>
                 {jobOpenings.map((job) => (
                     <Card key={job.title} className="shadow-md hover:shadow-lg transition-shadow duration-300">
                         <CardHeader className="grid grid-cols-1 md:grid-cols-[auto_1fr_auto] items-center gap-4">
@@ -64,11 +68,6 @@ export default function CareersPage() {
                                     <span>{job.department}</span>
                                 </CardDescription>
                             </div>
-                            <Button asChild className="hidden md:flex bg-accent hover:bg-accent/90 text-accent-foreground">
-                                <Link href="/contact?subject=Application%20For%20{{job.title}}">
-                                    Apply Now <ArrowRight className="ml-2 h-4 w-4" />
-                                </Link>
-                            </Button>
                         </CardHeader>
                         <CardContent>
                            <p className="text-muted-foreground">{job.description}</p>
@@ -78,27 +77,12 @@ export default function CareersPage() {
                                 <Badge key={tag} variant="secondary">{tag}</Badge>
                             ))}
                         </CardFooter>
-                         <div className="p-6 pt-0 md:hidden">
-                             <Button asChild className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
-                                <Link href="/contact?subject=Application%20For%20{{job.title}}">
-                                    Apply Now <ArrowRight className="ml-2 h-4 w-4" />
-                                </Link>
-                            </Button>
-                         </div>
                     </Card>
                 ))}
             </div>
-
-            <div className="text-center mt-16 bg-card p-8 rounded-lg">
-                <h3 className="text-2xl font-bold font-headline">Don't See Your Role?</h3>
-                <p className="text-muted-foreground mt-2 mb-4">
-                    We're always looking for talented individuals. If you're passionate about data and AI, send us your resume.
-                </p>
-                <Button asChild>
-                     <Link href="/contact?subject=General%20Application">
-                        Get In Touch
-                    </Link>
-                </Button>
+            <div className="bg-card p-8 rounded-lg shadow-lg">
+                <h2 className="text-3xl font-bold font-headline mb-6 text-center lg:text-left">Apply Now</h2>
+                <ApplicationForm jobs={jobOpenings} />
             </div>
         </div>
         
@@ -106,3 +90,5 @@ export default function CareersPage() {
     </div>
   );
 }
+
+    

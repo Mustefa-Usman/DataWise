@@ -4,13 +4,14 @@ import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { Toaster } from "@/components/ui/toaster"
 import { cn } from '@/lib/utils';
+import { Chatbot } from '@/components/chatbot';
 
 export const metadata: Metadata = {
   title: {
-    default: "YourBrand - Unlock Your Data's Potential",
-    template: `%s | YourBrand`,
+    default: "DataWise - Unlock Your Data's Potential",
+    template: `%s | DataWise`,
   },
-  description: 'YourBrand offers expert data analysis, AI solutions, and business intelligence to drive your business forward.',
+  description: 'DataWise offers expert data analysis, AI solutions, and business intelligence to drive your business forward.',
   keywords: ["Data Analysis", "AI Solutions", "Business Intelligence", "SEO", "Machine Learning"],
 };
 
@@ -33,9 +34,12 @@ export default function RootLayout({
         <main className="flex-1">
           {children}
         </main>
+        <Chatbot />
         <Footer />
         <Toaster />
       </body>
     </html>
   );
 }
+
+    
