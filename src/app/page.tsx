@@ -55,7 +55,7 @@ export default function Home() {
               Unlock Your Data's Potential
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-              DataWise translates your complex data into clear, actionable strategies that drive growth and innovation.
+              YourBrand translates your complex data into clear, actionable strategies that drive growth and innovation.
             </p>
             <div className="flex justify-center gap-4">
               <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">

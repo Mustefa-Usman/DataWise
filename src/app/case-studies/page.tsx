@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 
 export const metadata: Metadata = {
   title: 'Case Studies',
-  description: 'Discover how DataWise has helped businesses achieve success through data-driven strategies and AI solutions.',
+  description: 'Discover how YourBrand has helped businesses achieve success through data-driven strategies and AI solutions.',
 };
 
 const caseStudies = [

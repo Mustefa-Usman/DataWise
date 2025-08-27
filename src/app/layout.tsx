@@ -7,10 +7,10 @@ import { cn } from '@/lib/utils';
 
 export const metadata: Metadata = {
   title: {
-    default: "DataWise - Unlock Your Data's Potential",
-    template: `%s | DataWise`,
+    default: "YourBrand - Unlock Your Data's Potential",
+    template: `%s | YourBrand`,
   },
-  description: 'DataWise offers expert data analysis, AI solutions, and business intelligence to drive your business forward.',
+  description: 'YourBrand offers expert data analysis, AI solutions, and business intelligence to drive your business forward.',
   keywords: ["Data Analysis", "AI Solutions", "Business Intelligence", "SEO", "Machine Learning"],
 };
 

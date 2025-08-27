@@ -7,7 +7,7 @@ import { Badge } from '@/components/ui/badge';
 
 export const metadata: Metadata = {
   title: 'Careers',
-  description: 'Join the DataWise team and help us build the future of AI and data intelligence. Explore our open positions.',
+  description: 'Join the YourBrand team and help us build the future of AI and data intelligence. Explore our open positions.',
 };
 
 const jobOpenings = [

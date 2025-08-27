@@ -4,7 +4,7 @@ import { BarChart3, BrainCircuit, Cloud, Database, PieChart, Waypoints, Bot, Mes
 
 export const metadata: Metadata = {
   title: 'Our Services',
-  description: 'Explore the data and AI services offered by DataWise, from strategy and analytics to machine learning and cloud solutions.',
+  description: 'Explore the data and AI services offered by YourBrand, from strategy and analytics to machine learning and cloud solutions.',
 };
 
 const services = [
