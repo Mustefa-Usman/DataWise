@@ -5,12 +5,8 @@
 
 import {ai} from '@/ai/genkit';
 import {z} from 'genkit';
+import { Message, MessageSchema } from '@/ai/schema/message';
 
-export const MessageSchema = z.object({
-  role: z.enum(['user', 'model']),
-  content: z.string(),
-});
-export type Message = z.infer<typeof MessageSchema>;
 
 const services = [
   {

@@ -7,7 +7,7 @@ import { Input } from '@/components/ui/input';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Bot, LoaderCircle, MessageSquare, Send, User, X } from 'lucide-react';
 import { chat } from '@/ai/flows/chatbot-flow';
-import type { Message } from '@/ai/flows/chatbot-flow';
+import type { Message } from '@/ai/schema/message';
 
 const UserAvatar = () => (
     <div className="rounded-full bg-muted w-8 h-8 flex items-center justify-center shrink-0">
