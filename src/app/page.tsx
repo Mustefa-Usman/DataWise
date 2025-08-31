@@ -26,20 +26,20 @@ const caseStudies = [
   {
     title: "E-commerce Sales Boost",
     description: "Increased online sales by 40% through predictive customer analytics.",
-    image: "https://placehold.co/600x400.png",
-    hint: "data visualization"
+    image: "https://picsum.photos/600/400",
+    hint: "business analytics"
   },
   {
     title: "Supply Chain Optimization",
     description: "Reduced logistics costs by 25% with an AI-powered route optimization model.",
-    image: "https://placehold.co/600x400.png",
-    hint: "tech abstract"
+    image: "https://picsum.photos/600/400",
+    hint: "business analytics"
   },
   {
     title: "Healthcare Patient Outcomes",
     description: "Improved patient outcome predictions by 30% using machine learning.",
-    image: "https://placehold.co/600x400.png",
-    hint: "AI robot"
+    image: "https://picsum.photos/600/400",
+    hint: "business analytics"
   },
 ];
 
@@ -152,5 +152,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
