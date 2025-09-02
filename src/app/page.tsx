@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { ArrowRight, BrainCircuit, LineChart, Target } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const services = [
   {
@@ -27,19 +28,25 @@ const caseStudies = [
     title: "E-commerce Sales Boost",
     description: "Increased online sales by 40% through predictive customer analytics.",
     image: "https://picsum.photos/600/400",
-    hint: "business analytics"
+    hint: "business analytics",
+    avatar: "https://i.pravatar.cc/150?u=a042581f4e29026704d",
+    author: "Jane Doe, CEO",
   },
   {
     title: "Supply Chain Optimization",
     description: "Reduced logistics costs by 25% with an AI-powered route optimization model.",
     image: "https://picsum.photos/600/400",
-    hint: "business analytics"
+    hint: "business analytics",
+    avatar: "https://i.pravatar.cc/150?u=a042581f4e29026704e",
+    author: "John Smith, COO",
   },
   {
     title: "Healthcare Patient Outcomes",
     description: "Improved patient outcome predictions by 30% using machine learning.",
     image: "https://picsum.photos/600/400",
-    hint: "business analytics"
+    hint: "business analytics",
+    avatar: "https://i.pravatar.cc/150?u=a042581f4e29026704f",
+    author: "Dr. Emily White",
   },
 ];
 
@@ -106,7 +113,7 @@ export default function Home() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {caseStudies.map((study, index) => (
-                <Card key={index} className="overflow-hidden group">
+                <Card key={index} className="overflow-hidden group flex flex-col">
                   <Image
                     src={study.image}
                     alt={study.title}
@@ -118,9 +125,18 @@ export default function Home() {
                   <CardHeader>
                     <CardTitle className="font-headline">{study.title}</CardTitle>
                   </CardHeader>
-                  <CardContent>
+                  <CardContent className="flex-grow">
                     <CardDescription>{study.description}</CardDescription>
                   </CardContent>
+                   <CardContent className="flex items-center gap-4 pt-4">
+                        <Avatar>
+                            <AvatarImage src={study.avatar} alt={study.author} />
+                            <AvatarFallback>{study.author.charAt(0)}</AvatarFallback>
+                        </Avatar>
+                        <div className="text-sm">
+                            <p className="font-semibold">{study.author}</p>
+                        </div>
+                    </CardContent>
                 </Card>
               ))}
             </div>
