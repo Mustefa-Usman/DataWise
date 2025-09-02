@@ -25,26 +25,26 @@ const services = [
 
 const caseStudies = [
   {
-    title: "E-commerce Sales Boost",
-    description: "Increased online sales by 40% through predictive customer analytics.",
+    title: "40% Sales Increase for E-commerce Leader",
+    description: "Implemented a personalized recommendation engine, resulting in a 40% uplift in conversion rates.",
     image: "https://picsum.photos/600/400",
-    hint: "business analytics",
+    hint: "data visualization",
     avatar: "https://i.pravatar.cc/150?u=a042581f4e29026704d",
     author: "Jane Doe, CEO",
   },
   {
-    title: "Supply Chain Optimization",
-    description: "Reduced logistics costs by 25% with an AI-powered route optimization model.",
+    title: "Optimizing Logistics for a Fortune 500 Company",
+    description: "Developed an AI-powered route optimization system that reduced fuel costs by 18%.",
     image: "https://picsum.photos/600/400",
-    hint: "business analytics",
+    hint: "supply chain",
     avatar: "https://i.pravatar.cc/150?u=a042581f4e29026704e",
     author: "John Smith, COO",
   },
   {
-    title: "Healthcare Patient Outcomes",
-    description: "Improved patient outcome predictions by 30% using machine learning.",
+    title: "Improving Patient Outcomes in Healthcare",
+    description: "Our machine learning models predict patient readmission risks with 92% accuracy, allowing for proactive care.",
     image: "https://picsum.photos/600/400",
-    hint: "business analytics",
+    hint: "healthcare technology",
     avatar: "https://i.pravatar.cc/150?u=a042581f4e29026704f",
     author: "Dr. Emily White",
   },
@@ -141,7 +141,7 @@ export default function Home() {
               ))}
             </div>
              <div className="text-center mt-12">
-                <Button asChild variant="link" className="text-primary-foreground text-lg">
+                <Button asChild variant="link" className="text-primary text-lg">
                     <Link href="/case-studies">
                     View All Case Studies <ArrowRight className="ml-2 h-5 w-5" />
                     </Link>
