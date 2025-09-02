@@ -4,6 +4,7 @@ import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { Toaster } from "@/components/ui/toaster"
 import { cn } from '@/lib/utils';
+import { Chatbot } from '@/components/chatbot';
 
 export const metadata: Metadata = {
   title: {
@@ -33,9 +34,12 @@ export default function RootLayout({
         <main className="flex-1">
           {children}
         </main>
+        <Chatbot />
         <Footer />
         <Toaster />
       </body>
     </html>
   );
 }
+
+    

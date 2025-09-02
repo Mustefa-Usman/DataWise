@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { ArrowRight, BrainCircuit, LineChart, Target } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const services = [
   {
@@ -24,22 +25,28 @@ const services = [
 
 const caseStudies = [
   {
-    title: "E-commerce Sales Boost",
-    description: "Increased online sales by 40% through predictive customer analytics.",
-    image: "https://placehold.co/600x400.png",
-    hint: "data visualization"
+    title: "40% Sales Increase for Global E-commerce Leader",
+    description: "Implemented a personalized recommendation engine, resulting in a 40% uplift in conversion rates.",
+    image: "https://placehold.co/600x400/1d4ed8/ffffff?text=E-commerce",
+    hint: "online shopping",
+    author: "Jane Doe, CEO",
+    avatar: "https://i.pravatar.cc/150?u=a042581f4e29026704d",
   },
   {
-    title: "Supply Chain Optimization",
-    description: "Reduced logistics costs by 25% with an AI-powered route optimization model.",
-    image: "https://placehold.co/600x400.png",
-    hint: "tech abstract"
+    title: "Optimizing Logistics for a Fortune 500 Company",
+    description: "Developed an AI-powered route optimization system that reduced fuel costs by 18%.",
+    image: "https://placehold.co/600x400/166534/ffffff?text=Logistics",
+    hint: "logistics warehouse",
+    author: "John Smith, COO",
+    avatar: "https://i.pravatar.cc/150?u=a042581f4e29026704e",
   },
   {
-    title: "Healthcare Patient Outcomes",
-    description: "Improved patient outcome predictions by 30% using machine learning.",
-    image: "https://placehold.co/600x400.png",
-    hint: "AI robot"
+    title: "Improving Patient Outcomes in Healthcare",
+    description: "Our machine learning models predict patient readmission risks with 92% accuracy, allowing for proactive care.",
+    image: "https://placehold.co/600x400/be123c/ffffff?text=Healthcare",
+    hint: "medical tech",
+    author: "Dr. Emily White",
+    avatar: "https://i.pravatar.cc/150?u=a042581f4e29026704f",
   },
 ];
 
@@ -106,26 +113,27 @@ export default function Home() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {caseStudies.map((study, index) => (
-                <Card key={index} className="overflow-hidden group">
-                  <Image
-                    src={study.image}
-                    alt={study.title}
-                    width={600}
-                    height={400}
-                    data-ai-hint={study.hint}
-                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
+                <Card key={index} className="overflow-hidden group flex flex-col">
                   <CardHeader>
                     <CardTitle className="font-headline">{study.title}</CardTitle>
                   </CardHeader>
-                  <CardContent>
+                  <CardContent className="flex-grow">
                     <CardDescription>{study.description}</CardDescription>
                   </CardContent>
+                   <CardContent className="flex items-center gap-4 pt-4">
+                        <Avatar>
+                            <AvatarImage src={study.avatar} alt={study.author} />
+                            <AvatarFallback>{study.author.charAt(0)}</AvatarFallback>
+                        </Avatar>
+                        <div className="text-sm">
+                            <p className="font-semibold">{study.author}</p>
+                        </div>
+                    </CardContent>
                 </Card>
               ))}
             </div>
              <div className="text-center mt-12">
-                <Button asChild variant="link" className="text-primary-foreground text-lg">
+                <Button asChild variant="link" className="text-primary text-lg">
                     <Link href="/case-studies">
                     View All Case Studies <ArrowRight className="ml-2 h-5 w-5" />
                     </Link>
