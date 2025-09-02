@@ -25,9 +25,9 @@ const services = [
 
 const caseStudies = [
   {
-    title: "40% Sales Increase for E-commerce Leader",
+    title: "40% Sales Increase for Global E-commerce Leader",
     description: "Implemented a personalized recommendation engine, resulting in a 40% uplift in conversion rates.",
-    image: "https://picsum.photos/seed/ecommerce/600/400",
+    image: "https://placehold.co/600x400/1d4ed8/ffffff?text=E-commerce",
     hint: "online shopping",
     avatar: "https://i.pravatar.cc/150?u=a042581f4e29026704d",
     author: "Jane Doe, CEO",
@@ -35,7 +35,7 @@ const caseStudies = [
   {
     title: "Optimizing Logistics for a Fortune 500 Company",
     description: "Developed an AI-powered route optimization system that reduced fuel costs by 18%.",
-    image: "https://picsum.photos/seed/logistics/600/400",
+    image: "https://placehold.co/600x400/166534/ffffff?text=Logistics",
     hint: "logistics warehouse",
     avatar: "https://i.pravatar.cc/150?u=a042581f4e29026704e",
     author: "John Smith, COO",
@@ -43,7 +43,7 @@ const caseStudies = [
   {
     title: "Improving Patient Outcomes in Healthcare",
     description: "Our machine learning models predict patient readmission risks with 92% accuracy, allowing for proactive care.",
-    image: "https://picsum.photos/seed/healthcare/600/400",
+    image: "https://placehold.co/600x400/be123c/ffffff?text=Healthcare",
     hint: "medical tech",
     avatar: "https://i.pravatar.cc/150?u=a042581f4e29026704f",
     author: "Dr. Emily White",
