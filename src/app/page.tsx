@@ -114,14 +114,6 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {caseStudies.map((study, index) => (
                 <Card key={index} className="overflow-hidden group flex flex-col">
-                  <Image
-                    src={study.image}
-                    alt={study.title}
-                    width={600}
-                    height={400}
-                    data-ai-hint={study.hint}
-                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
                   <CardHeader>
                     <CardTitle className="font-headline">{study.title}</CardTitle>
                   </CardHeader>
